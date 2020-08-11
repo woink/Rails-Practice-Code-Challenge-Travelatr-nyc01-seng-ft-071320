@@ -1,0 +1,13 @@
+<p><%= @destination.name %></p>
+<p><%= @destination.country %></p>
+<% if @destination.featured_post %>
+  <%= link_to @destination.featured_post.title, post_path %>
+<% else %>
+  <%= "This destination has no posts." %><br>
+<% end %>
+<br>
+<% if @destination.avg_bloggers == 0 %>
+  <%= "This destination has not been blogged yet" %>
+<% else %>
+  <%= @destination.avg_bloggers %>
+<% end %>
